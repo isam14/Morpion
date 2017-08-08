@@ -2,49 +2,107 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet"></link>
-    <link rel="stylesheet" type="" href="style.css"></link>
-    
-    
-    <title>Jeu de Morpion</title>
+  <meta charset="UTF-8">
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- My css file -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+  
+  
+  <title>Jeu de Morpion</title>
 </head>
 
 <body>
+  
+  <h1 class="title">Jeu de Morpion</h1>
+  
+  <!-- Button trigger modal -->
+  <!-- <div class="container"> -->
+    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+      Afficher les joueurs
+    </button>
     
-    
-    <div class="container">
-        <div class="row">
-            <div id="1" class="case col-xs-4 col-md-2"></div>
-            <div id="2" class="case col-xs-4 col-md-2"></div>
-            <div id="3" class="case col-xs-4 col-md-2"></div>
-        </div>
-        
-        <div class="row">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content" id="modal-app">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Recap</h4>
+          </div>
+          <div class="modal-body">
             
-            <div id="4" class="case col-xs-4 col-md-2"></div>
-            <div id="5" class="case col-xs-4 col-md-2"></div>
-            <div id="6" class="case col-xs-4 col-md-2"></div>
-        </div>
-        
-        <div class="row">
             
-            <div id="7" class="case col-xs-4 col-md-2"></div>
-            <div id="8" class="case col-xs-4 col-md-2"></div>
-            <div id="9" class="case col-xs-4 col-md-2"></div>
+            
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon" id="sizing-addon3">Joueur 1</span>
+              <input id="joueur1" type="text" class="form-control" placeholder="nom joueur 1" aria-describedby="sizing-addon3">
+            </div>
+            
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon" id="sizing-addon3">Joueur 2</span>
+              <input id="joueur2" type="text" class="form-control" placeholder="nom joueur 2" aria-describedby="sizing-addon3">
+            </div>
+            
+            <div class="input-group input-group-sm">
+              <span class="input-group-addon" id="sizing-addon3">Nbre de parties</span>
+              <input id="parties" type="text" class="form-control" placeholder="nombre de partie" aria-describedby="sizing-addon3">
+              
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Rejouer</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
         </div>
-        <div id="vider" >Rejouer</div>
+      </div>
     </div>
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-    crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-    crossorigin="anonymous"></script>
+  <!-- </div> -->
+  
+  
+  <div class="container">
+    <div class="row">
+      <div id="11" class="case col-xs-4 col-md-2"></div>
+      <div id="12" class="case col-xs-4 col-md-2"></div>
+      <div id="13" class="case col-xs-4 col-md-2"></div>
+    </div>
     
-    <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="app.js"></script>
+    <div class="row">
+      
+      <div id="21" class="case col-xs-4 col-md-2"></div>
+      <div id="22" class="case col-xs-4 col-md-2"></div>
+      <div id="23" class="case col-xs-4 col-md-2"></div>
+    </div>
+    
+    <div class="row">
+      
+      <div id="31" class="case col-xs-4 col-md-2"></div>
+      <div id="32" class="case col-xs-4 col-md-2"></div>
+      <div id="33" class="case col-xs-4 col-md-2"></div>
+    </div>
+
+    <div class="container">
+
+      
+    <div id="vider">Rejouer</div>
+
+
+    <div id="joueur1"><h2>Joueur 1</h2></div>
+    <div id="joueur2"><h2>Joueur 2</h2></div>
+    <div id="nbparties"><h2>Parties</h2></div>
+
+    </div>
+  </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="app.js" rel="stylesheet"></script>
 </body>
 
 </html>
